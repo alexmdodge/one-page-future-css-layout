@@ -32,8 +32,8 @@
         </header>
     </section>
 
-    <section class="writing-modes container container-dark minimized__container">
-        <span class="minimized__button minimized">+</span>
+    <section class="writing-modes container container-dark">
+        <span class="minimized__button">-</span>
         <h4 class="minimized__title">
             Writing Modes and Logical Properties
         </h4>
@@ -41,20 +41,20 @@
             Writing Modes and Logical Properties
         </h2>
         <p>
-            For a regular default horizontal layout the block dimension resides along the y-axis,
-            while the inline dimensions represents the x. Changing the writing-mode, also changes
-            which represents the inline and block dimensions. <br> <br>
+            For the default horizontal writing mode layout, the block dimension resides along the vertical,
+            while the inline dimension represents the horizontal. Changing the <br>writing-mode</b> also changes
+            the orientation of the inline and block dimensions. <br> <br>
 
-            <b>Logical Properties</b> are a way of referencing these dimensions and providing
-            specific styles to them.
+            <b>Logical Properties</b> are a way of referencing and applying styles to properties in the above
+            mentioned directions.
         </p>
 
-        <h3>Horizontal</h3>
+        <h3>Horizontal Writing Mode</h3>
         <div class="horizontal">
             Good luck. You're gonna need it. General Madine. We have stolen a small Imperial shuttle. Disguised as a cargo ship, and using a secret Imperial code, a strike team will land on the moon and deactivate the shield generator. Sounds dangerous. I wonder who they found to pull that off. General Solo, is your strike team assembled?
         </div>
 
-        <h3>Vertical</h3>
+        <h3>Vertical Writing Mode</h3>
         <div class="vertical">
             Good luck. You're gonna need it. General Madine. We have stolen a small Imperial shuttle.
         </div>
@@ -79,8 +79,8 @@
         </div>
     </section>
 
-    <section class="box-alignment-grid container minimized__container">
-        <span class="minimized__button minimized">+</span>
+    <section class="box-alignment-grid container">
+        <span class="minimized__button">-</span>
         <h4 class="minimized__title">
             Box Alignment in Grid
         </h4>
@@ -185,8 +185,8 @@
         </div>
     </section>
 
-    <section class="box-alignment-flex container container-dark minimized__container">
-        <span class="minimized__button minimized">+</span>
+    <section class="box-alignment-flex container container-dark">
+        <span class="minimized__button">-</span>
         <h4 class="minimized__title">
             Box Alignment in Flex
         </h4>
@@ -194,8 +194,7 @@
             Box Alignment in Flex
         </h2>
         <p>
-            Flex differs because in a way it's only one dimensional, so the concept
-            of the block and inline axis do not exist. Instead there is the <b>cross</b>
+            Flex differs because it has it's own dimensions, the <b>cross</b>
             and <b>main</b> axis.
         </p>
         <ul>
@@ -212,10 +211,10 @@
         </p>
 
         <div class="flex">
-            <div class="flex-item flex-item1">Item 1</div>
-            <div class="flex-item flex-item2">Item 2</div>
-            <div class="flex-item flex-item3">Item 3</div>
-            <div class="flex-item flex-item4">Item 4</div>
+            <div class="flex-item">Item 1</div>
+            <div class="flex-item">Item 2</div>
+            <div class="flex-item">Item 3</div>
+            <div class="flex-item">Item 4</div>
         </div>
 
         <h3 class="center"> Align </h3>
@@ -225,19 +224,39 @@
         </p>
 
         <h4>
-            Aligning Items End
+            Aligning Row Items - End
         </h4>
-        <div class="flex align-items-end">
-            <div class="flex-item flex-item1">Item 1</div>
-            <div class="flex-item flex-item2">Item 2</div>
-            <div class="flex-item flex-item3">Item 3</div>
-            <div class="flex-item flex-item4 align-self-end">Item 4</div>
+        <div class="flex align-items-flex-end flex-row">
+            <div class="flex-item">Item 1</div>
+            <div class="flex-item">Item 2</div>
+            <div class="flex-item">Item 3</div>
+            <div class="flex-item">Item 4</div>
         </div>
 
         <h4>
-            Align Items Start Vertical
+            Align Column Items - End
         </h4>
-        <div class="flex align-items-end">
+        <div class="flex align-items-flex-end flex-column height-responsive">
+            <div class="flex-item">Item 1</div>
+            <div class="flex-item">Item 2</div>
+            <div class="flex-item align-self-center">Item 3</div>
+            <div class="flex-item">Item 4</div>
+        </div>
+
+        <h4>
+            Align Column Items Vertical Writing Mode - End
+        </h4>
+        <div class="flex align-items-flex-end flex-column vertical">
+            <div class="flex-item">Item 1</div>
+            <div class="flex-item">Item 2</div>
+            <div class="flex-item">Item 3</div>
+            <div class="flex-item">Item 4</div>
+        </div>
+
+        <h4>
+            Aligning Row Items and Content
+        </h4>
+        <div class="flex align-content-space-between align-items-center flex-wrap fixed-height">
             <div class="flex-item flex-item1">Item 1</div>
             <div class="flex-item flex-item2">Item 2</div>
             <div class="flex-item flex-item3">Item 3</div>
@@ -246,45 +265,35 @@
 
         <h3 class="center"> Justify </h3>
         <p>
-            Remember that <b>justify</b> is along the inline axis. So in our default writing
-            mode this would affect the horizontal placement.
+            Remember that <b>justify</b> is along the main axis. So in a flex row
+            with a default writing direction this would affect the horizontal placement.
         </p>
 
         <h4>
-            Justify Items Start
+            Justify Content End
         </h4>
-        <div class="flex justify-items-start">
-            <div class="flex-item flex-item1">Item 1</div>
-            <div class="flex-item flex-item2">Item 2</div>
-            <div class="flex-item flex-item3">Item 3</div>
-            <div class="flex-item flex-item4">Item 4</div>
+        <div class="flex justify-content-flex-end">
+            <div class="flex-item">Item 1</div>
+            <div class="flex-item">Item 2</div>
+            <div class="flex-item">Item 3</div>
+            <div class="flex-item">Item 4</div>
         </div>
 
         <h4>
             Justify Content Center
         </h4>
         <div class="flex justify-content-center">
-            <div class="flex-item flex-item1">Item 1</div>
-            <div class="flex-item flex-item2">Item 2</div>
-            <div class="flex-item flex-item3">Item 3</div>
-            <div class="flex-item flex-item4">Item 4</div>
-        </div>
-
-        <h4>
-            Justify and Align Self Center
-        </h4>
-        <div class="flex">
-            <div class="flex-item flex-item1">Item 1</div>
-            <div class="flex-item flex-item2">Item 2</div>
-            <div class="flex-item flex-item3 align-self-center justify-self-center">Item 3</div>
-            <div class="flex-item flex-item4">Item 4</div>
+            <div class="flex-item">Item 1</div>
+            <div class="flex-item">Item 2</div>
+            <div class="flex-item">Item 3</div>
+            <div class="flex-item">Item 4</div>
         </div>
 
         <div class="support">
             <h4 class="balanced">
                 Support Information
             </h4>
-            <a href="https://caniuse.com/#feat=css-grid">CSS Grid</a>
+            <a href="https://caniuse.com/#feat=flexbox">Flexible Box Layout Module</a>
         </div>
     </section>
 
