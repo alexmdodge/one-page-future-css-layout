@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Future of CSS Layout</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/fonts.css">
+
+    <link rel="stylesheet" href="styles/1-writing-modes.css">
+    <link rel="stylesheet" href="styles/2-box-alignment-grid.css">
+    <link rel="stylesheet" href="styles/3-box-alignment-flex.css">
+</head>
+<body>
+    <section class="plug">
+        👉
+        <a href="https://noti.st/rachelandrew/VdNKCh/present">
+             Go check out the original presentation by Rachel Andrew
+        </a>
+        👈
+    </section>
+    <section class="container">
+        <header>
+            <h1>
+                The Future of Layout With CSS
+            </h1>
+        </header>
+    </section>
+
+    <section class="writing-modes container container-dark minimized__container">
+        <span class="minimized__button minimized">+</span>
+        <h4 class="minimized__title">
+            Writing Modes and Logical Properties
+        </h4>
+        <h2 class="center">
+            Writing Modes and Logical Properties
+        </h2>
+        <p>
+            For a regular default horizontal layout the block dimension resides along the y-axis,
+            while the inline dimensions represents the x. Changing the writing-mode, also changes
+            which represents the inline and block dimensions. <br> <br>
+
+            <b>Logical Properties</b> are a way of referencing these dimensions and providing
+            specific styles to them.
+        </p>
+
+        <h3>Horizontal</h3>
+        <div class="horizontal">
+            Good luck. You're gonna need it. General Madine. We have stolen a small Imperial shuttle. Disguised as a cargo ship, and using a secret Imperial code, a strike team will land on the moon and deactivate the shield generator. Sounds dangerous. I wonder who they found to pull that off. General Solo, is your strike team assembled?
+        </div>
+
+        <h3>Vertical</h3>
+        <div class="vertical">
+            Good luck. You're gonna need it. General Madine. We have stolen a small Imperial shuttle.
+        </div>
+
+        <h3>Horizontal Fixed Inline</h3>
+        <div class="horizontal fixed-inline">
+            Good luck. You're gonna need it. General Madine. We have stolen a small Imperial shuttle. Disguised as a cargo ship, and using a secret Imperial code, a strike team will land on the moon and deactivate the shield generator. Sounds dangerous. I wonder who they found to pull that off. General Solo, is your strike team assembled?
+        </div>
+
+        <h3>Vertical Fixed Inline</h3>
+        <div class="vertical fixed-inline">
+            Good luck. You're gonna need it. General Madine. We have stolen a small Imperial shuttle.
+        </div>
+
+
+        <div class="support">
+            <h4 class="balanced">
+                Support Information
+            </h4>
+            <a href="https://caniuse.com/#feat=css-logical-props">Logical Properties</a>
+            <a href="https://caniuse.com/#search=writing">Writing Mode</a>
+        </div>
+    </section>
+
+    <section class="box-alignment-grid container minimized__container">
+        <span class="minimized__button minimized">+</span>
+        <h4 class="minimized__title">
+            Box Alignment in Grid
+        </h4>
+        <h2 class="center">
+            Box Alignment in Grid
+        </h2>
+        <p>
+            Using our knowledge of the writing mode and how that corresponds to
+            the <b>block</b> and <b>inline</b> dimensions we can see how the following
+            would apply for the alignment properties:
+        </p>
+        <ul>
+            <li>align-content</li>
+            <li>align-self</li>
+            <li>align-items</li>
+        </ul>
+        <ul>
+            <li>justify-content</li>
+            <li>justify-self</li>
+            <li>justify-items</li>
+        </ul>
+        <p>
+            <b>align</b> is for the block dimension, and <b>justify</b> is for the
+            inline dimension. In all cases below we're going to be modifying the
+            following grid.
+        </p>
+
+        <div class="grid">
+            <div class="grid-item grid-item1">Item 1</div>
+            <div class="grid-item grid-item2">Item 2</div>
+            <div class="grid-item grid-item3">Item 3</div>
+            <div class="grid-item grid-item4">Item 4</div>
+        </div>
+
+        <h3 class="center"> Align </h3>
+        <p>
+            Remember that <b>align</b> is along the block axis. So in our default writing
+            mode this would affect the vertical placement.
+        </p>
+
+        <h4>
+            Aligning Items Start
+        </h4>
+        <div class="grid align-items-start">
+            <div class="grid-item grid-item1">Item 1</div>
+            <div class="grid-item grid-item2">Item 2</div>
+            <div class="grid-item grid-item3">Item 3</div>
+            <div class="grid-item grid-item4">Item 4</div>
+        </div>
+
+        <h4>
+            Align Items Start Vertical
+        </h4>
+        <div class="grid align-items-start vertical">
+            <div class="grid-item grid-item1">Item 1</div>
+            <div class="grid-item grid-item2">Item 2</div>
+            <div class="grid-item grid-item3">Item 3</div>
+            <div class="grid-item grid-item4">Item 4</div>
+        </div>
+
+        <h3 class="center"> Justify </h3>
+        <p>
+            Remember that <b>justify</b> is along the inline axis. So in our default writing
+            mode this would affect the horizontal placement.
+        </p>
+
+        <h4>
+            Justify Items Start
+        </h4>
+        <div class="grid justify-items-start">
+            <div class="grid-item grid-item1">Item 1</div>
+            <div class="grid-item grid-item2">Item 2</div>
+            <div class="grid-item grid-item3">Item 3</div>
+            <div class="grid-item grid-item4">Item 4</div>
+        </div>
+
+        <h4>
+            Justify Content Center
+        </h4>
+        <div class="grid justify-content-center">
+            <div class="grid-item grid-item1">Item 1</div>
+            <div class="grid-item grid-item2">Item 2</div>
+            <div class="grid-item grid-item3">Item 3</div>
+            <div class="grid-item grid-item4">Item 4</div>
+        </div>
+
+        <h4>
+            Justify and Align Self Center
+        </h4>
+        <div class="grid">
+            <div class="grid-item grid-item1">Item 1</div>
+            <div class="grid-item grid-item2">Item 2</div>
+            <div class="grid-item grid-item3 align-self-center justify-self-center">Item 3</div>
+            <div class="grid-item grid-item4">Item 4</div>
+        </div>
+
+        <div class="support">
+            <h4 class="balanced">
+                Support Information
+            </h4>
+            <a href="https://caniuse.com/#feat=css-grid">CSS Grid</a>
+        </div>
+    </section>
+
+    <section class="box-alignment-flex container container-dark minimized__container">
+        <span class="minimized__button minimized">+</span>
+        <h4 class="minimized__title">
+            Box Alignment in Flex
+        </h4>
+        <h2 class="center">
+            Box Alignment in Flex
+        </h2>
+        <p>
+            Flex differs because in a way it's only one dimensional, so the concept
+            of the block and inline axis do not exist. Instead there is the <b>cross</b>
+            and <b>main</b> axis.
+        </p>
+        <ul>
+            <li>align-content</li>
+            <li>align-self</li>
+            <li>align-items</li>
+        </ul>
+        <ul>
+            <li>justify-content</li>
+        </ul>
+        <p>
+            <b>align</b> is for the cross axis, and <b>justify</b> is for the
+            main axis.
+        </p>
+
+        <div class="flex">
+            <div class="flex-item flex-item1">Item 1</div>
+            <div class="flex-item flex-item2">Item 2</div>
+            <div class="flex-item flex-item3">Item 3</div>
+            <div class="flex-item flex-item4">Item 4</div>
+        </div>
+
+        <h3 class="center"> Align </h3>
+        <p>
+            Remember that <b>align</b> is along the cross axis. So in a flex row
+            with a default writing direction this would affect the vertical placement.
+        </p>
+
+        <h4>
+            Aligning Items End
+        </h4>
+        <div class="flex align-items-end">
+            <div class="flex-item flex-item1">Item 1</div>
+            <div class="flex-item flex-item2">Item 2</div>
+            <div class="flex-item flex-item3">Item 3</div>
+            <div class="flex-item flex-item4 align-self-end">Item 4</div>
+        </div>
+
+        <h4>
+            Align Items Start Vertical
+        </h4>
+        <div class="flex align-items-end">
+            <div class="flex-item flex-item1">Item 1</div>
+            <div class="flex-item flex-item2">Item 2</div>
+            <div class="flex-item flex-item3">Item 3</div>
+            <div class="flex-item flex-item4">Item 4</div>
+        </div>
+
+        <h3 class="center"> Justify </h3>
+        <p>
+            Remember that <b>justify</b> is along the inline axis. So in our default writing
+            mode this would affect the horizontal placement.
+        </p>
+
+        <h4>
+            Justify Items Start
+        </h4>
+        <div class="flex justify-items-start">
+            <div class="flex-item flex-item1">Item 1</div>
+            <div class="flex-item flex-item2">Item 2</div>
+            <div class="flex-item flex-item3">Item 3</div>
+            <div class="flex-item flex-item4">Item 4</div>
+        </div>
+
+        <h4>
+            Justify Content Center
+        </h4>
+        <div class="flex justify-content-center">
+            <div class="flex-item flex-item1">Item 1</div>
+            <div class="flex-item flex-item2">Item 2</div>
+            <div class="flex-item flex-item3">Item 3</div>
+            <div class="flex-item flex-item4">Item 4</div>
+        </div>
+
+        <h4>
+            Justify and Align Self Center
+        </h4>
+        <div class="flex">
+            <div class="flex-item flex-item1">Item 1</div>
+            <div class="flex-item flex-item2">Item 2</div>
+            <div class="flex-item flex-item3 align-self-center justify-self-center">Item 3</div>
+            <div class="flex-item flex-item4">Item 4</div>
+        </div>
+
+        <div class="support">
+            <h4 class="balanced">
+                Support Information
+            </h4>
+            <a href="https://caniuse.com/#feat=css-grid">CSS Grid</a>
+        </div>
+    </section>
+
+    <script src="scripts/index.js"></script>
+</body>
+</html>

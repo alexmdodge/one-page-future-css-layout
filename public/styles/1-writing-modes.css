@@ -1,0 +1,16 @@
+.horizontal {
+    writing-mode: initial;
+}
+
+.vertical {
+    writing-mode: vertical-lr;
+    
+    /* 
+     * Also can use right to left
+     * writing-mode: vertical-rl
+     */
+}
+
+.fixed-inline {
+    inline-size: 200px;
+}
