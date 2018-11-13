@@ -4,7 +4,7 @@
   "description": "One page with all of the components Rachel Andrew reviewed during her Web Unleashed Toronto 2018 talk.",
   "main": "index.js",
   "scripts": {
-    "start": "live-server ./public --port=9090"
+    "start": "live-server ./docs --port=9090"
   },
   "repository": {
     "type": "git",
